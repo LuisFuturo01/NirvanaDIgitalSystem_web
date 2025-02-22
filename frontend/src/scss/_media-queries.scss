@@ -1,0 +1,80 @@
+@import 'variables';
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: $margin-base;
+    position: relative;
+
+    .brand-title {
+      width: 100%;
+      text-align: start;
+    }
+
+    .hamburger {
+      display: flex;
+      position: absolute;
+      margin-top: $margin-base;
+    }
+
+    nav {
+      width: 100%;
+
+      ul {
+        flex-direction: column;
+        gap: $margin-base;
+        display: none;
+
+        &.active {
+          display: flex;
+        }
+
+        li {
+          width: 100%;
+          text-align: center;
+          display: flex;
+
+          a {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  .home-container {
+    padding: $padding-base;
+
+    .banner {
+      padding: $padding-large $padding-base;
+
+      .home-title {
+        font-size: $font-size-large;
+      }
+
+      .home-message {
+        font-size: $font-size-base;
+      }
+    }
+
+    .about-us,
+    .services-overview,
+    .cta {
+      padding: $padding-large $padding-base;
+    }
+
+    .services-list {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .contact-container {
+    padding: $padding-base;
+
+    .contact-description {
+      padding: $padding-base;
+    }
+  }
+}

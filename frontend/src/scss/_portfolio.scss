@@ -1,0 +1,45 @@
+@import 'variables';
+
+.portfolio-container {
+  max-width: 1000px;
+  margin: $margin-xlarge auto;
+  text-align: center;
+
+  .portfolio-title {
+    font-size: $font-size-subtitle;
+    color: $primary-color;
+    margin-bottom: $margin-xlarge;
+  }
+
+  .portfolio-grid {
+    margin-top: $margin-large;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: $margin-large;
+    place-items: center;
+
+    .portfolio-item {
+      background: $secondary-color;
+      padding: $padding-large;
+      border-radius: $border-radius;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
+      width: 99%;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+
+      h3 {
+        font-size: $font-size-large;
+        color: $primary-color;
+        margin-bottom: $margin-base;
+      }
+
+      p {
+        font-size: $font-size-base;
+        color: white;
+      }
+    }
+  }
+}

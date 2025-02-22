@@ -1,0 +1,49 @@
+@import 'variables';
+
+.services-container {
+  max-width: 900px;
+  margin: $margin-xlarge auto;
+  text-align: center;
+
+  .services-title {
+    font-size: $font-size-subtitle;
+    color: $primary-color;
+    margin-bottom: $margin-large;
+  }
+
+  .services-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: $margin-large;
+    padding: $padding-large;
+
+    .service-item {
+      background: $secondary-color;
+      padding: $padding-large;
+      border-radius: $border-radius;
+      font-size: $font-size-base;
+      transition: transform 0.2s ease, background $transition-base;
+
+      &:hover {
+        transform: translateY(-5px);
+        background: $hover-color;
+        color: $secondary-color;
+
+        h3 {
+          filter: drop-shadow(0 1px 1px $secondary-color);
+        }
+      }
+
+      h3 {
+        font-size: $font-size-large;
+        color: $primary-color;
+        margin-bottom: $margin-base;
+      }
+
+      p {
+        font-size: $font-size-base;
+        color: white;
+      }
+    }
+  }
+}

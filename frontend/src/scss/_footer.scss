@@ -1,0 +1,48 @@
+@import 'variables';
+
+footer {
+  background-color: $footer-bg-color;
+  padding: $padding-large;
+  text-align: center;
+  color: white;
+  font-size: $font-size-small;
+
+  .footer-social-links,
+  .footer-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: $margin-base;
+    padding: 0;
+    margin: $margin-base 0;
+
+    li {
+      a {
+        color: white;
+        text-decoration: none;
+        transition: color $transition-base;
+
+        &:hover {
+          color: $hover-color;
+        }
+
+        img {
+          width: 40px;
+          aspect-ratio: 1/1;
+          filter: brightness(0.6) drop-shadow(0 0 3px white);
+          z-index: 1;
+          transition: transform .3s, filter .2s ease;
+          overflow: hidden;
+          border: 1px solid white;
+          border-radius: 20%;
+
+          &:hover {
+            filter: brightness(1) drop-shadow(0 0 5rem white);
+            transform: scale(1.3);
+            
+          }
+        }
+      }
+    }
+  }
+}

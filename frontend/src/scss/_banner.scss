@@ -1,0 +1,163 @@
+@import 'variables';
+
+.home-container {
+  padding: $padding-large;
+  background-color: $background-color;
+  color: white;
+  text-align: center;
+
+  .banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: $padding-xlarge $padding-large;
+    background: $background-color; // Fondo oscuro
+    color: $primary-color;
+    text-align: center;
+    gap: $margin-large;
+
+    .banner-image {
+      max-height: 50dvh;
+      max-width: auto;
+      margin-bottom: $margin-large;
+    }
+
+    .banner-content {
+      max-width: 800px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: $margin-large;
+      padding: $padding-large;
+      align-items: center;
+    }
+
+    .home-title {
+      font-size: $font-size-title;
+      margin-bottom: $margin-large;
+    }
+
+    .home-message {
+      font-size: $font-size-base;
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    .banner-button {
+      background-color: $secondary-color;
+      color: $primary-color;
+      padding: $padding-base $padding-large;
+      border-radius: $border-radius;
+      text-decoration: none;
+      font-size: $font-size-base;
+      transition: background $transition-base;
+      width: max-content;
+
+      &:hover {
+        background-color: $hover-color;
+      }
+    }
+  }
+
+  .about-us {
+    padding: $padding-xlarge $padding-large;
+    background-color: $secondary-color;
+    border-radius: $border-radius;
+    margin: $margin-large 0;
+
+    .about-content {
+      max-width: 800px;
+      margin: 0 auto;
+
+      .about-title {
+        font-size: $font-size-subtitle;
+        color: $primary-color;
+        margin-bottom: $margin-large;
+      }
+
+      .about-description {
+        font-size: $font-size-base;
+        color: white;
+        line-height: 1.6;
+      }
+    }
+  }
+
+  .services-overview {
+    padding: $padding-xlarge $padding-large;
+    background-color: $secondary-color;
+    border-radius: $border-radius;
+    margin: $margin-large 0;
+
+    .services-title {
+      font-size: $font-size-subtitle;
+      color: $primary-color;
+      margin-bottom: $margin-large;
+    }
+
+    .services-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: $margin-large;
+
+      .service-item {
+        background: $background-color;
+        padding: $padding-large;
+        border-radius: $border-radius;
+        transition: transform 0.2s ease, background $transition-base;
+
+        &:hover {
+          transform: translateY(-5px);
+          background: $hover-color;
+          color: $secondary-color;
+        }
+
+        h3 {
+          font-size: $font-size-large;
+          color: $primary-color;
+          margin-bottom: $margin-base;
+        }
+
+        p {
+          font-size: $font-size-base;
+          color: white;
+        }
+      }
+    }
+  }
+
+  .cta {
+    padding: $padding-xlarge $padding-large;
+    background-color: $secondary-color;
+    color: white;
+    border-radius: $border-radius;
+    margin: $margin-large 0;
+
+    .cta-title {
+      font-size: $font-size-subtitle;
+      margin-bottom: $margin-large;
+    }
+
+    .cta-description {
+      font-size: $font-size-base;
+      margin-bottom: $margin-large;
+    }
+
+    .cta-button {
+      background-color: $secondary-color;
+      color: $primary-color;
+      padding: $padding-base $padding-large;
+      border-radius: $border-radius;
+      text-decoration: none;
+      font-size: $font-size-base;
+      transition: background $transition-base, color $transition-base;
+
+      &:hover {
+        background-color: $hover-color;
+        color: $secondary-color;
+      }
+    }
+  }
+}

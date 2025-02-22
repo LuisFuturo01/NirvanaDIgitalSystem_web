@@ -28,20 +28,37 @@ header {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 header .brand-title {
-  color: #81e6d9;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+header .brand-title:focus, header .brand-title:active {
+  outline: none;
+  border: none;
+  box-shadow: none;
+}
+header .brand-title img {
+  width: 40px;
+  aspect-ratio: 1/1;
+}
+header .brand-title h1 {
   font-size: 24px;
+  color: #81e6d9;
   font-weight: bold;
 }
 header nav ul {
   list-style: none;
   display: flex;
-  gap: 15px;
+  gap: 10px;
 }
 header nav ul li a {
   text-decoration: none;
   color: white;
   font-size: 16px;
-  padding: 8px 12px;
+  padding: 10px 20px;
   border-radius: 5px;
   transition: background 0.3s ease, color 0.3s ease;
 }
@@ -62,24 +79,6 @@ header .hamburger span {
   border-radius: 5px;
 }
 
-.main-content {
-  flex-grow: 1;
-  padding: 50px;
-  text-align: center;
-}
-.main-content .section-title {
-  font-size: 36px;
-  color: #81e6d9;
-  margin-bottom: 15px;
-}
-.main-content .message {
-  font-size: 18px;
-  color: white;
-  max-width: 800px;
-  margin: 0 auto;
-  line-height: 1.6;
-}
-
 footer {
   background-color: #2d3748;
   padding: 20px;
@@ -92,7 +91,7 @@ footer .footer-links {
   list-style: none;
   display: flex;
   justify-content: center;
-  gap: 15px;
+  gap: 10px;
   padding: 0;
   margin: 10px 0;
 }
@@ -110,27 +109,32 @@ footer .footer-social-links li a img,
 footer .footer-links li a img {
   width: 40px;
   aspect-ratio: 1/1;
-  filter: brightness(0.1);
+  filter: brightness(0.6) drop-shadow(0 0 3px white);
   z-index: 1;
+  transition: transform 0.3s, filter 0.2s ease;
+  overflow: hidden;
+  border: 1px solid white;
+  border-radius: 20%;
 }
 footer .footer-social-links li a img:hover,
 footer .footer-links li a img:hover {
-  filter: brightness(1);
+  filter: brightness(1) drop-shadow(0 0 5rem white);
+  transform: scale(1.3);
 }
 
 .contact-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 15px;
-  margin-top: 40px;
+  gap: 10px;
+  margin-top: 50px;
 }
 .contact-container .contact-title {
   font-size: 32px;
   color: #81e6d9;
 }
 .contact-container .contact-info {
-  font-size: 18px;
+  font-size: 16px;
   color: white;
 }
 .contact-container .contact-info a {
@@ -144,7 +148,7 @@ footer .footer-links li a img:hover {
 .contact-container .contact-form {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 20px;
   width: 100%;
   max-width: 500px;
 }
@@ -171,7 +175,7 @@ footer .footer-links li a img:hover {
   color: #2d3748;
   border: none;
   border-radius: 5px;
-  font-size: 18px;
+  font-size: 16px;
   cursor: pointer;
   transition: background 0.3s ease;
 }
@@ -181,7 +185,7 @@ footer .footer-links li a img:hover {
 
 .services-container {
   max-width: 900px;
-  margin: 40px auto;
+  margin: 50px auto;
   text-align: center;
 }
 .services-container .services-title {
@@ -197,9 +201,9 @@ footer .footer-links li a img:hover {
 }
 .services-container .services-list .service-item {
   background: #2d3748;
-  padding: 15px;
-  border-radius: 8px;
-  font-size: 18px;
+  padding: 20px;
+  border-radius: 5px;
+  font-size: 16px;
   transition: transform 0.2s ease, background 0.3s ease;
 }
 .services-container .services-list .service-item:hover {
@@ -228,7 +232,7 @@ footer .footer-links li a img:hover {
 .portfolio-container .portfolio-title {
   font-size: 32px;
   color: #81e6d9;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 .portfolio-container .portfolio-grid {
   margin-top: 20px;
@@ -240,7 +244,7 @@ footer .footer-links li a img:hover {
 .portfolio-container .portfolio-grid .portfolio-item {
   background: #2d3748;
   padding: 20px;
-  border-radius: 8px;
+  border-radius: 5px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;
   width: 99%;
@@ -254,12 +258,12 @@ footer .footer-links li a img:hover {
   margin-bottom: 10px;
 }
 .portfolio-container .portfolio-grid .portfolio-item p {
-  font-size: 18px;
+  font-size: 16px;
   color: white;
 }
 
 .about-container {
-  padding: 60px;
+  padding: 50px;
   text-align: center;
   max-width: 800px;
   margin: 0 auto;
@@ -270,12 +274,12 @@ footer .footer-links li a img:hover {
   margin-bottom: 20px;
 }
 .about-container .about-description {
-  font-size: 18px;
+  font-size: 16px;
   color: white;
   line-height: 1.6;
 }
 .about-container .about-mission {
-  font-size: 18px;
+  font-size: 16px;
   color: white;
   line-height: 1.6;
   margin-top: 20px;
@@ -283,10 +287,10 @@ footer .footer-links li a img:hover {
 .about-container .about-team-title {
   font-size: 32px;
   color: #81e6d9;
-  margin-top: 40px;
+  margin-top: 50px;
 }
 .about-container .about-team-description {
-  font-size: 18px;
+  font-size: 16px;
   color: white;
   line-height: 1.6;
   margin-top: 10px;
@@ -319,7 +323,7 @@ footer .footer-links li a img:hover {
   text-align: center;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 20px;
   padding: 20px;
   align-items: center;
 }
@@ -328,7 +332,7 @@ footer .footer-links li a img:hover {
   margin-bottom: 20px;
 }
 .home-container .banner .home-message {
-  font-size: 18px;
+  font-size: 16px;
   max-width: 800px;
   margin: 0 auto;
   line-height: 1.6;
@@ -339,7 +343,7 @@ footer .footer-links li a img:hover {
   padding: 10px 20px;
   border-radius: 5px;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 16px;
   transition: background 0.3s ease;
   width: max-content;
 }
@@ -347,9 +351,9 @@ footer .footer-links li a img:hover {
   background-color: rgba(99, 179, 237, 0.8392156863);
 }
 .home-container .about-us {
-  padding: 40px 20px;
+  padding: 50px 20px;
   background-color: #2d3748;
-  border-radius: 8px;
+  border-radius: 5px;
   margin: 20px 0;
 }
 .home-container .about-us .about-content {
@@ -362,14 +366,14 @@ footer .footer-links li a img:hover {
   margin-bottom: 20px;
 }
 .home-container .about-us .about-content .about-description {
-  font-size: 18px;
+  font-size: 16px;
   color: white;
   line-height: 1.6;
 }
 .home-container .services-overview {
-  padding: 40px 20px;
+  padding: 50px 20px;
   background-color: #2d3748;
-  border-radius: 8px;
+  border-radius: 5px;
   margin: 20px 0;
 }
 .home-container .services-overview .services-title {
@@ -385,7 +389,7 @@ footer .footer-links li a img:hover {
 .home-container .services-overview .services-list .service-item {
   background: #1a202c;
   padding: 20px;
-  border-radius: 8px;
+  border-radius: 5px;
   transition: transform 0.2s ease, background 0.3s ease;
 }
 .home-container .services-overview .services-list .service-item:hover {
@@ -403,10 +407,10 @@ footer .footer-links li a img:hover {
   color: white;
 }
 .home-container .cta {
-  padding: 40px 20px;
+  padding: 50px 20px;
   background-color: #2d3748;
   color: white;
-  border-radius: 8px;
+  border-radius: 5px;
   margin: 20px 0;
 }
 .home-container .cta .cta-title {
@@ -414,7 +418,7 @@ footer .footer-links li a img:hover {
   margin-bottom: 20px;
 }
 .home-container .cta .cta-description {
-  font-size: 18px;
+  font-size: 16px;
   margin-bottom: 20px;
 }
 .home-container .cta .cta-button {
@@ -423,8 +427,8 @@ footer .footer-links li a img:hover {
   padding: 10px 20px;
   border-radius: 5px;
   text-decoration: none;
-  font-size: 18px;
-  transition: background 0.3s, color 0.3s ease;
+  font-size: 16px;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 .home-container .cta .cta-button:hover {
   background-color: rgba(99, 179, 237, 0.8392156863);
@@ -445,7 +449,7 @@ footer .footer-links li a img:hover {
   header .hamburger {
     display: flex;
     position: absolute;
-    margin-top: 8px;
+    margin-top: 10px;
   }
   header nav {
     width: 100%;
@@ -471,10 +475,10 @@ footer .footer-links li a img:hover {
     padding: 10px;
   }
   .home-container .banner {
-    padding: 30px 10px;
+    padding: 20px 10px;
   }
   .home-container .banner .home-title {
-    font-size: 28px;
+    font-size: 24px;
   }
   .home-container .banner .home-message {
     font-size: 16px;
@@ -488,11 +492,11 @@ footer .footer-links li a img:hover {
     grid-template-columns: 1fr;
   }
   .contact-container {
-    padding: 0.8rem;
+    padding: 10px;
   }
   .contact-container .contact-description {
-    padding: 0.5rem;
+    padding: 10px;
   }
 }
 
-/*# sourceMappingURL=index.css.map */
+/*# sourceMappingURL=main.css.map */

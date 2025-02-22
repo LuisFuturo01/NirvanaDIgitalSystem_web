@@ -1,0 +1,70 @@
+@import 'variables';
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $margin-base;
+  margin-top: $margin-xlarge;
+
+  .contact-title {
+    font-size: $font-size-subtitle;
+    color: $primary-color;
+  }
+
+  .contact-info {
+    font-size: $font-size-base;
+    color: white;
+
+    a {
+      color: #fffb;
+      text-decoration: none;
+      transition: color $transition-base;
+
+      &:hover {
+        color: #6e6eb3;
+      }
+    }
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: $margin-large;
+    width: 100%;
+    max-width: 500px;
+
+    input,
+    textarea {
+      width: 100%;
+      padding: $padding-base;
+      border: none;
+      border-radius: $border-radius;
+      font-size: $font-size-base;
+      background-color: $secondary-color;
+      box-shadow: $secondary-color 5px 5px 20px;
+      resize: none;
+      color: white;
+
+      &:focus {
+        outline: none;
+        box-shadow: $primary-color 0px 0px 20px;
+      }
+    }
+
+    button {
+      padding: $padding-base;
+      background-color: $primary-color;
+      color: $secondary-color;
+      border: none;
+      border-radius: $border-radius;
+      font-size: $font-size-base;
+      cursor: pointer;
+      transition: background $transition-base;
+
+      &:hover {
+        background-color: $hover-color;
+      }
+    }
+  }
+}

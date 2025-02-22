@@ -1,0 +1,71 @@
+@import 'variables';
+
+header {
+  background-color: $secondary-color;
+  padding: $padding-base $padding-large;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: $box-shadow-base;
+
+  .brand-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    &:focus, &:active{
+      outline: none;
+      border: none;
+      box-shadow: none;
+    }
+    img{
+      width: 40px;
+      aspect-ratio: 1/1;
+    }
+    h1{
+      font-size: $font-size-large;
+      color: $primary-color;
+      font-weight: bold;
+    }
+  }
+
+  nav {
+    ul {
+      list-style: none;
+      display: flex;
+      gap: $margin-base;
+
+      li {
+        a {
+          text-decoration: none;
+          color: white;
+          font-size: $font-size-base;
+          padding: $padding-base $padding-large;
+          border-radius: $border-radius;
+          transition: background $transition-base, color $transition-base;
+
+          &:hover {
+            background: $hover-color;
+            color: $secondary-color;
+          }
+        }
+      }
+    }
+  }
+
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+
+    span {
+      height: 3px;
+      width: 25px;
+      background: white;
+      margin-bottom: 4px;
+      border-radius: $border-radius;
+    }
+  }
+}
