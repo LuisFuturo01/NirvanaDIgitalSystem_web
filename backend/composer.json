@@ -1,0 +1,18 @@
+{
+    "name": "usuario/backend",
+    "description": "Backend part about Nirvana Digital System",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Usuario\\Backend\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Luis Zeballos",
+            "email": "luis.futuro.01@gmail.com"
+        }
+    ],
+    "require": {}
+}
+
