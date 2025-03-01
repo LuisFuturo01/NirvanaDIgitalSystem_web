@@ -1,5 +1,5 @@
 import React from "react";
-import bannerImage from "../assets/images/logo/banner.png"; 
+import nirvanaImage from "../assets/images/nirvana_logos/logoNirvanaOficial-grande.png"; 
 import { Link } from "react-router-dom";
 
 const Home = () => {
@@ -10,7 +10,7 @@ const Home = () => {
     <>
       <div className="home-container">
         <section className="banner">
-          <img src={bannerImage} alt="Tecnología Avanzada" className="banner-image" />
+          <img src={nirvanaImage} alt="Tecnología Avanzada" className="banner-image" />
           <div className="banner-content">
             <h1 className="home-title">Transformamos Tu Mundo Digital</h1>
             <p className="home-message">{message}</p>

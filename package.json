@@ -3,6 +3,10 @@
     "sass": "^1.85.0"
   },
   "scripts": {
-  "watch-scss": "sass --watch scss/main.scss css/main.css"
-}
+    "dev": "react-scripts start",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  }
 }

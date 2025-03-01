@@ -8,10 +8,11 @@ const Contact = () => {
         Estamos aquí para ayudarte. Si tienes alguna pregunta o deseas obtener más información sobre nuestros servicios,
         no dudes en contactarnos.
       </p>
-      <form className="contact-form">
-        <input type="text" placeholder="Nombre" required />
-        <input type="email" placeholder="Correo Electrónico" required />
-        <textarea placeholder="Tu Mensaje" required></textarea>
+      <form className="contact-form" action="#" 
+      method="POST">
+        <input type="text" placeholder="Nombre" name="name" required />
+        <input type="email" placeholder="Correo Electrónico" name="mail" required />
+        <textarea placeholder="Tu Mensaje" name="message" required></textarea>
         <button type="submit" className="submit-btn">Enviar Mensaje</button>
       </form>
       <p className="contact-info">
@@ -19,7 +20,7 @@ const Contact = () => {
 " target="_blank">nirvanadigitalsystem@gmail.com</a>
       </p>
       <p className="contact-info">
-        <strong>Teléfono:</strong> <a href="https://wa.me/59176894088?text=Hola%20Nirvana%20Digital%20System%2C%20quiero%20informacion%20sobre%20sus%20servicios" target="_blank">+591 76894088</a>
+        <strong>Celular:</strong> <a href="https://wa.me/59176894088?text=Hola%20Nirvana%20Digital%20System%2C%20quiero%20informacion%20sobre%20sus%20servicios" target="_blank">+591 76894088</a>
       </p>
     </div>
   );

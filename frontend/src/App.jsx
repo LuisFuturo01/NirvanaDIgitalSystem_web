@@ -7,12 +7,13 @@ import Services from "./components/Services";
 import Portfolio from "./components/Portfolio";
 import Contact from "./components/Contact";
 import About from "./components/About";
+import Page404 from "./components/Page404"
 
 const App = () => {
   return (
     <Router>
       <div className="app-container">
-      <BurguerMenu />
+        <BurguerMenu />
         <main>
           <Routes>
             <Route path="/" element={<Home />} />
@@ -20,6 +21,7 @@ const App = () => {
             <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/about" element={<About />} />
+            <Route path="*" element={<Page404 />}/>
           </Routes>
         </main>
         <Footer />

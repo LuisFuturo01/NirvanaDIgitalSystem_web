@@ -11,23 +11,52 @@
     margin-bottom: $margin-xlarge;
   }
 
+  .portfolio-description {
+    font-size: $font-size-base;
+    color: white;
+    margin-bottom: $margin-large;
+  }
+
   .portfolio-grid {
     margin-top: $margin-large;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: $margin-large;
     place-items: center;
+    grid-auto-rows: minmax(420px, auto); // Asegura que todas las celdas tengan la misma altura mínima
 
     .portfolio-item {
       background: $secondary-color;
       padding: $padding-large;
       border-radius: $border-radius;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-      transition: transform 0.3s ease;
-      width: 99%;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+      width: 95%;
+      max-width: 320px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      height: 100%; 
+      overflow: hidden;
 
       &:hover {
-        transform: scale(1.05);
+        transform: scale(1.03);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+        background-color: lighten($secondary-color, 10%);
+      }
+
+      .portfolio-image {
+        width: 200px;
+        aspect-ratio: 1/1;
+        object-fit: contain;
+        border-radius: $border-radius;
+        margin-bottom: $margin-base;
+        transition: transform 0.3s ease;
+
+        &:hover {
+          transform: scale(1.05);
+        }
       }
 
       h3 {
@@ -39,6 +68,24 @@
       p {
         font-size: $font-size-base;
         color: white;
+        flex-grow: 1; // Hace que el contenido crezca para llenar el espacio disponible
+      }
+
+      .portfolio-button {
+        background-color: $primary-color;
+        color: $secondary-color;
+        padding: $padding-base $padding-large;
+        border-radius: $border-radius;
+        text-decoration: none;
+        font-size: $font-size-base;
+        transition: background $transition-base, color $transition-base;
+        text-align: center;
+        margin-top: $margin-base;
+
+        &:hover {
+          background-color: $hover-color;
+          color: $secondary-color;
+        }
       }
     }
   }

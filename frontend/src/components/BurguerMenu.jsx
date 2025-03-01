@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import bannerLogo from '../assets/images/logo/banner.png';
+import nirvanaLogo from '../assets/images/nirvana_logos/logoNirvanaOficial-mediano.png';
 
 const BurguerMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,7 +12,7 @@ const BurguerMenu = () => {
   return (
     <header>
       <Link to="/" className="brand-title" src="">
-        <img src={bannerLogo} alt="Logo Nirvana Digital System" />
+        <img src={nirvanaLogo} alt="Logo Nirvana Digital System" />
         <h1>Nirvana Digital System</h1>
       </Link>
       <div className="hamburger" onClick={toggleMenu}>

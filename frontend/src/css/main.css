@@ -66,6 +66,7 @@ header nav ul li a:hover {
   background: rgba(99, 179, 237, 0.8392156863);
   color: #2d3748;
 }
+
 header .hamburger {
   display: none;
   flex-direction: column;

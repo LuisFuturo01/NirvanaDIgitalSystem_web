@@ -4,7 +4,7 @@
     "type": "project",
     "autoload": {
         "psr-4": {
-            "Usuario\\Backend\\": "src/"
+            "App\\": "src/"
         }
     },
     "authors": [
@@ -13,6 +13,8 @@
             "email": "luis.futuro.01@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "altorouter/altorouter": "^2.0"
+    }
 }
 
