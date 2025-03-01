@@ -1,29 +1,28 @@
-@import 'variables';
-
+@use 'variables';
 footer {
-  background-color: $footer-bg-color;
-  padding: $padding-large;
+  background-color: variables.$footer-bg-color;
+  padding: variables.$padding-large;
   text-align: center;
   color: white;
-  font-size: $font-size-small;
+  font-size: variables.$font-size-small;
 
   .footer-social-links,
   .footer-links {
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: $margin-base;
+    gap: variables.$margin-base;
     padding: 0;
-    margin: $margin-base 0;
+    margin: variables.$margin-base 0;
 
     li {
       a {
         color: white;
         text-decoration: none;
-        transition: color $transition-base;
+        transition: color variables.$transition-base;
 
         &:hover {
-          color: $hover-color;
+          color: variables.$hover-color;
         }
 
         img {

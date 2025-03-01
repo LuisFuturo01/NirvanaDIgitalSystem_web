@@ -1,25 +1,24 @@
-@import 'variables';
-
+@use 'variables';
 .contact-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: $margin-base;
-  margin-top: $margin-xlarge;
+  gap: variables.$margin-base;
+  margin-top: variables.$margin-xlarge;
 
   .contact-title {
-    font-size: $font-size-subtitle;
-    color: $primary-color;
+    font-size: variables.$font-size-subtitle;
+    color: variables.$primary-color;
   }
 
   .contact-info {
-    font-size: $font-size-base;
+    font-size: variables.$font-size-base;
     color: white;
 
     a {
       color: #fffb;
       text-decoration: none;
-      transition: color $transition-base;
+      transition: color variables.$transition-base;
 
       &:hover {
         color: #6e6eb3;
@@ -30,40 +29,45 @@
   .contact-form {
     display: flex;
     flex-direction: column;
-    gap: $margin-large;
+    gap: variables.$margin-large;
     width: 100%;
     max-width: 500px;
 
     input,
     textarea {
       width: 100%;
-      padding: $padding-base;
+      padding: variables.$padding-base;
       border: none;
-      border-radius: $border-radius;
-      font-size: $font-size-base;
-      background-color: $secondary-color;
-      box-shadow: $secondary-color 5px 5px 20px;
+      border-radius: variables.$border-radius;
+      font-size: variables.$font-size-base;
+      background-color: variables.$secondary-color;
+      box-shadow: variables.$secondary-color 0px 0px 8px;
       resize: none;
       color: white;
-
+      transition: opacity .5s ease, box-shadow .5s ease;
+      &:hover{
+        box-shadow: variables.$primary-color 0 0 5px;
+        opacity: .8;
+      }
       &:focus {
         outline: none;
-        box-shadow: $primary-color 0px 0px 20px;
+        box-shadow: variables.$primary-color 0px 0px 5px;
+        opacity: 1;
       }
     }
 
     button {
-      padding: $padding-base;
-      background-color: $primary-color;
-      color: $secondary-color;
+      padding: variables.$padding-base;
+      background-color: variables.$primary-color;
+      color: variables.$secondary-color;
       border: none;
-      border-radius: $border-radius;
-      font-size: $font-size-base;
+      border-radius: variables.$border-radius;
+      font-size: variables.$font-size-base;
       cursor: pointer;
-      transition: background $transition-base;
+      transition: background variables.$transition-base;
 
       &:hover {
-        background-color: $hover-color;
+        background-color: variables.$hover-color;
       }
     }
   }

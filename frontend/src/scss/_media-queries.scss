@@ -1,10 +1,9 @@
-@import 'variables';
-
+@use 'variables';
 @media (max-width: 768px) {
   header {
     flex-direction: column;
     align-items: flex-end;
-    gap: $margin-base;
+    gap: variables.$margin-base;
     position: relative;
 
     .brand-title {
@@ -15,7 +14,7 @@
     .hamburger {
       display: flex;
       position: absolute;
-      margin-top: $margin-base;
+      margin-top: variables.$margin-base;
     }
 
     nav {
@@ -23,7 +22,7 @@
 
       ul {
         flex-direction: column;
-        gap: $margin-base;
+        gap: variables.$margin-base;
         display: none;
 
         &.active {
@@ -45,24 +44,24 @@
   }
 
   .home-container {
-    padding: $padding-base;
+    padding: variables.$padding-base;
 
     .banner {
-      padding: $padding-large $padding-base;
+      padding: variables.$padding-large variables.$padding-base;
 
       .home-title {
-        font-size: $font-size-large;
+        font-size: variables.$font-size-large;
       }
 
       .home-message {
-        font-size: $font-size-base;
+        font-size: variables.$font-size-base;
       }
     }
 
     .about-us,
     .services-overview,
     .cta {
-      padding: $padding-large $padding-base;
+      padding: variables.$padding-large variables.$padding-base;
     }
 
     .services-list {
@@ -71,10 +70,10 @@
   }
 
   .contact-container {
-    padding: $padding-base;
+    padding: variables.$padding-base;
 
     .contact-description {
-      padding: $padding-base;
+      padding: variables.$padding-base;
     }
   }
 }

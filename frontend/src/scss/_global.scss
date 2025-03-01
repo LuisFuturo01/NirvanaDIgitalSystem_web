@@ -1,5 +1,4 @@
-@import 'variables';
-
+@use 'variables';
 // Reset de márgenes y padding
 * {
   margin: 0;
@@ -7,10 +6,9 @@
   box-sizing: border-box;
 }
 
-// Estilos globales
 body {
-  font-family: $font-family;
-  background-color: $background-color;
+  font-family: variables.$font-family;
+  background-color: variables.$background-color;
   color: white;
   display: flex;
   flex-direction: column;

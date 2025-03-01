@@ -49,7 +49,7 @@ const Home = () => {
           </div>
         </section>
         <section className="cta">
-          <h3 className="cta-title">¿Listo para llevar tu negocio al futuro?</h3>
+          <h3 className="cta-title ">¿Listo para llevar tu negocio al futuro?</h3>
           <p className="cta-description">Contáctanos hoy mismo y obtén una consultoría gratuita sobre nuestras soluciones.</p>
           <Link to="/contact" className="cta-button">Contáctanos</Link>
         </section>

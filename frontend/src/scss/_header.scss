@@ -1,12 +1,11 @@
-@import 'variables';
-
+@use 'variables';
 header {
-  background-color: $secondary-color;
-  padding: $padding-base $padding-large;
+  background-color: variables.$secondary-color;
+  padding: variables.$padding-base variables.$padding-large;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: $box-shadow-base;
+  box-shadow: variables.$box-shadow-base;
 
   .brand-title {
     display: flex;
@@ -25,8 +24,8 @@ header {
       aspect-ratio: 1/1;
     }
     h1{
-      font-size: $font-size-large;
-      color: $primary-color;
+      font-size: variables.$font-size-large;
+      color: variables.$primary-color;
       font-weight: bold;
     }
   }
@@ -35,20 +34,20 @@ header {
     ul {
       list-style: none;
       display: flex;
-      gap: $margin-base;
+      gap: variables.$margin-base;
 
       li {
         a {
           text-decoration: none;
           color: white;
-          font-size: $font-size-base;
-          padding: $padding-base $padding-large;
-          border-radius: $border-radius;
-          transition: background $transition-base, color $transition-base;
+          font-size: variables.$font-size-base;
+          padding: variables.$padding-base variables.$padding-large;
+          border-radius: variables.$border-radius;
+          transition: background variables.$transition-base, color variables.$transition-base;
 
           &:hover {
-            background: $hover-color;
-            color: $secondary-color;
+            background: variables.$hover-color;
+            color: variables.$secondary-color;
           }
         }
       }
@@ -65,7 +64,7 @@ header {
       width: 25px;
       background: white;
       margin-bottom: 4px;
-      border-radius: $border-radius;
+      border-radius: variables.$border-radius;
     }
   }
 }

@@ -1,0 +1,52 @@
+@use "variables";
+.loader_container{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.loader {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  position: relative;
+  border-radius: 50%;
+  border: 4px solid transparent;
+  border-top: 4px solid variables.$primary-color;
+  animation: rotate 1s linear infinite;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    animation: pulse 1.5s infinite alternate ease-in-out;
+  }
+
+  &::before {
+    width: 100%;
+    height: 100%;
+    border-top-color: variables.$hover-color;
+    border-bottom-color: variables.$hover-color;
+  }
+
+  &::after {
+    width: 80%;
+    height: 80%;
+    border-top-color: variables.$secondary-color;
+    border-bottom-color: variables.$secondary-color;
+  }
+}
+
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(1.2); opacity: 0.6; }
+}

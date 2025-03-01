@@ -40,7 +40,10 @@ const Portfolio = () => {
 
       <div className="portfolio-grid">
         {projects.length === 0 ? (
-          <p>Cargando proyectos...</p>
+          <div className="loader_container">
+            <span className="loader"></span>
+            <span>Cargando...</span>
+          </div>
         ) : (
           projects.map((project) => (
             <div key={project.id} className="portfolio-item">
